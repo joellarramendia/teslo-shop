@@ -10,7 +10,7 @@ import { useAuthStore } from "@/auth/store/auth.store";
 export const CustomHeader = () => {
 
   const [searchParams, setSearchParams] = useSearchParams()
-  const { user, logout } = useAuthStore()
+  const { authStatus, isAdmin, logout } = useAuthStore()
 
   const { gender } = useParams()
 
@@ -82,7 +82,7 @@ export const CustomHeader = () => {
           </Button>
 
           {
-            !user ? (
+            authStatus === 'not-authenticated' ? (
               <Link to='/auth/login'>
                 <Button
                   variant='default'
@@ -104,16 +104,20 @@ export const CustomHeader = () => {
             )
           }
 
+          {
+            isAdmin() && (
+              <Link to='/admin'>
+                <Button
+                  variant='destructive'
+                  size='sm'
+                  className='ml-2'
+                >
+                  Admin
+                </Button>
+              </Link>
+            )
+          }
 
-          <Link to='/admin'>
-            <Button
-              variant='destructive'
-              size='sm'
-              className='ml-2'
-            >
-              Admin
-            </Button>
-          </Link>
         </div>
       </div>
     </div>
