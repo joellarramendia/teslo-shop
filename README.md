@@ -1,5 +1,7 @@
 # Link
 https://teslo-shop-shk.netlify.app/
+correo admin= test1@google.com
+contraseña = Abc123
 
 # TesloShop
 
