@@ -1,6 +1,6 @@
 # Link
-https://teslo-shop-shk.netlify.app/
-correo admin= test1@google.com
+https://teslo-shop-shk.netlify.app/ <br/>
+correo admin= test1@google.com <br/>
 contraseña = Abc123
 
 # TesloShop
